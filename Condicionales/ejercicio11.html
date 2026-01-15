@@ -6,6 +6,28 @@
     <title>Ejercicio 11 - Condicionales</title>
 </head>
 <body>
-    let origen
+    <script>
+        let origen = prompt("Origen del viaje?");
+        let destino = prompt("Destino del viaje");
+        let descuento = 0;
+        if(origen == "Palma")
+        {
+            switch(destino)
+            {
+                case "Barcelona": 
+                    descuento = 5;
+                    break;
+
+                case "Madrid": 
+                    descuento = 10;
+                    break;
+
+                case "Valencia": 
+                    descuento = 15;
+                    break;
+            }
+        }
+        document.write(`El descuento aplicado es del ${descuento}%`)
+    </script>
 </body>
 </html>
