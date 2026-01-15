@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 - Condicionales</title>
+</head>
+<body>
+    <script>
+        let marca, modelo, descuento = 0;
+
+        marca = prompt("Marca?", "");
+        modelo = prompt("Modelo?", "");
+
+        if(marca == "ford")
+        {
+            if(modelo == "fiesta")
+            {
+                descuento = 5;
+            }
+            else
+            {
+                descuento = 10;
+            }
+        }
+
+        document.write(`<h3>Su descuento es de ${descuento}</h3>`)
+    </script>
+</body>
+</html>

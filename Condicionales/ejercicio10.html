@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - Condicionales</title>
+</head>
+<body>
+    <script>
+        let edad;
+
+        edad = parseInt(prompt("Introduce tu edad"));
+
+        if(edad >= 1 && edad <= 120)
+        {
+            if(edad > 18)
+            {
+                document.write("Tiene permiso de acceso")
+            } 
+            else 
+            {
+                document.write("No tiene permiso de acceso")
+            }
+        }
+        else 
+        {
+            document.write("EDAD NO VÁLIDA")
+        }
+    </script>
+</body>
+</html>
