@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 - Condicionales</title>
+</head>
+<body>
+    <script>
+        let treintaYUno = [1, 3, 5, 7, 8, 10, 12];
+        let numero, dias
+        do 
+        {
+            numero = parseInt(prompt("Introduce un numero del 1 al 12:"))
+        } 
+        while (numero < 1 || numero > 12)
+
+        if(treintaYUno.includes(numero))
+        {
+            dias = 31;
+        }
+        else
+        {
+            if (numero == 2)
+            {
+                dias = 28;
+            } 
+            else
+            {
+                dias = 30
+            }
+        }
+        document.write(`El mes ${numero} tiene ${dias} días`)
+    </script>
+</body>
+</html>
