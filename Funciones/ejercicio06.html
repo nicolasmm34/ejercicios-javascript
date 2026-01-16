@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 - Funciones</title>
+</head>
+<body>
+    <script>
+        let pasaraFahrenheit = (grado) => {
+            return grado * 1.8 + 32;};
+        let pasaraCelsius = (grado) => {
+            return (grado - 32)/1.8;};
+
+        var result = pasaraFahrenheit(22);
+        alert(result);
+
+        result = Math.round(pasaraCelsius(71.6));
+        alert(result);
+    </script>
+</body>
+</html>

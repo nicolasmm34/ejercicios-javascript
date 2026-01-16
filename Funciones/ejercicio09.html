@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 - Funciones</title>
+    <script>
+        let Suma = (a, b) => {return a + b;};
+    </script>
+</head>
+<body>
+    <h1>Suma de dos números por teclado</h1>
+    <p id="resultado"></p>
+    <script>
+        let n1 = parseInt(window.prompt("Primer número?", ""));
+        let n2 = parseInt(window.prompt("Segundo número?", ""));
+        document.getElementById("resultado").innerHTML = `La suma de ${n1} y ${n2} es ${Suma(n1, n2)}.`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 - Funciones</title>
+    <script defer>
+        let Saludo = (persona1, persona2) => {document.getElementById("salida").innerHTML = `Hola ${persona1} y ${persona2}`;};
+    </script>
+</head>
+<body>
+    <h1>Función con dos parámetros</h1>
+    <p>Saluda a dos personas.</p>
+    <p id="salida"></p>
+    <script>
+        let nombre1 = window.prompt("Prime nombre?", "");
+        let nombre2 = window.prompt("Segundo nombre?", "");
+        Saludo(nombre1, nombre2);
+    </script>
+</body>
+</html>
