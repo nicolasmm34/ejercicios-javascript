@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - Funciones</title>
+    <script>
+        let func = (randomize) => {
+            let x = 3;
+                if (randomize){
+                    x = parseInt(Math.random() * 10);
+                }
+            return x;
+        }
+
+        let programa = () => {
+            document.getElementById("salida").innerHTML = func(false);
+            document.getElementById("salida").innerHTML += func(1);
+        }
+    </script>
+</head>
+<body>
+    <h3>Alcance de variables (Scope)</h3>
+    <input type="button" value="Pulsa aquí" onclick="programa()">
+    <div id="salida"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Formularios</title>
+    <script>
+        let calcula = () => {
+            document.datos.respuesta.value = eval(document.datos.entrada.value);
+        }
+    </script>
+</head>
+<body>
+    <form name="datos" action="Ejercicio.html">
+        <label for="entrada">Escribe una fórmula matemática, por ejemplo: (2+3)*10</label>
+        <input type="text" name="entrada" id="entrada" size="20">
+        <input type="button" name="B1" value="Ejecuta" onclick="calcula()">
+        <br><br>
+        <label for="respuesta">Respuesta: </label>
+        <input type="text" size="20" name="respuesta">
+        <br><br>
+        <input type="reset" name="B2" value="Reset">
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Formularios</title>
+    <script>
+        let porcentaje = () => {
+            let numero = parseFloat(document.formulario.numero.value);
+
+            let p = document.getElementById("resultado"); 
+
+            p.innerHTML = `El 10% de ${numero} es ${(numero*0.1).toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo del 10%</h1>
+    <form name="formulario">
+        <label for="numero">Introduce un número: </label>
+        <input type="text" name="numero" id="numero" size="10">
+        <input type="button" name="boton" id="submit" value="Cálculo del 10%" onclick="porcentaje()">
+    </form>
+    <p id="resultado"></p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Formularios</title>
+    <script>
+        let saludo = () => {
+            let nom_usuario = document.fdatos.entrada.value;
+            document.writeln(`Hola, buenos días ${nom_usuario}`);
+        }
+    </script>
+</head>
+<body>
+    <form name="fdatos">
+        <label for="entrada">Escribe tu nombre:</label> 
+        <input type="text" size="10" name="entrada" id="entrada">
+        <input type="button" value="Pulsa aquí" onclick="saludo()">
+    </form>
+</body>
+</html>
