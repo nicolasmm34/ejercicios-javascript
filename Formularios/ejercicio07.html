@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 - Formularios</title>
+    <script>
+        let aFahrenheit = () => {
+            let celsius = parseInt(document.formulario1.texto1.value);
+            let fahrenheit = celsius * 1.8 + 32;
+            document.getElementById("resultado1").innerHTML = `${celsius} grados Celsius son equivalentes a ${fahrenheit} grados Fahrenheit.`
+        }
+
+        let aCelsius = () => {
+            let fahrenheit = parseInt(document.formulario2.texto2.value);
+            let celsius = Math.round((fahrenheit - 32)/1.8);
+            document.getElementById("resultado2").innerHTML = `${fahrenheit} grados Fahrenheit son equivalentes a ${celsius} grados Celsius.`
+        }
+    </script>
+</head>
+<body>
+    <h3>Conversiones</h3>
+    <form name="formulario1">
+        Introduce un valor en grados celsius: <input type="text" name="texto1" size="5">
+        <input type="button" value="Fahrenheit" onclick="aFahrenheit()">
+    </form>
+    <p id="resultado1"></p>
+
+    <form name="formulario2">
+        Introduce un valor en grados fahrenheit: <input type="text" name="texto2" size="5">
+        <input type="button" value="Celsius" onclick="aCelsius()">
+    </form>
+    <p id="resultado2"></p>
+</body>
+</html>
