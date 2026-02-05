@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11 - Formularios</title>
+    <script>
+        let peso = () => {
+            let altura = document.formulario.altura.value;
+            let edad = document.formulario.edad.value;
+            let sexo = parseInt(document.formulario.sexo.value);
+            let peso = 50+((altura-150)/4)*3 + (edad-20)/4;
+            if(!sexo) peso *= 0.9;
+            document.getElementById("resultado").innerHTML = `El peso estimado con estos datos es de ${peso}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Peso de referencia</h1>
+    <form name="formulario">
+        <label for="altura">Altura (cm): </label>
+        <input type="text" name="altura" size="5">
+        <br>
+        <label for="edad">Edad: </label>
+        <input type="text" name="edad" size="5">
+        <br>
+
+        <input type="radio" id="hombre" name="sexo" value="1" required>
+        <label for="hombre">Hombre </label>
+        <input type="radio" id="mujer" name="sexo" value="0">
+        <label for="mujer">Mujer</label>
+
+    </form>
+    <input type="button" value="Calcular" onclick="peso()">
+    <p id="resultado"></p>
+</body>
+</html>

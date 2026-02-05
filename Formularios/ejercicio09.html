@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 09 - Formularios</title>
+    <script>
+        let calcular = () => {
+            let nota1 = parseInt(document.formulario.nota1.value);
+            let porcentaje1 = parseInt(document.formulario.porcentaje1.value);
+            let nota2 = parseInt(document.formulario.nota2.value);
+            let porcentaje2 = parseInt(document.formulario.porcen2.value);
+
+            document.getElementById("resultado").innerHTML = `La nota ponderada es ${(nota1*porcentaje1 + nota2*porcentaje2)/100}`
+        }
+    </script>
+</head>
+<body>
+    <form name="formulario">
+        <h1>Calculo de Notas</h1>
+        <table>
+            <tr>
+                <td>
+                    <label for="nota1">Nota: </label>
+                    <input type="text" name="nota1" size="5">
+                </td>
+                <td>
+                    <label for="porcen1">Porcentaje: </label>
+                    <input type="text" name="porcentaje1" size="5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nota2">Nota: </label>
+                    <input type="text" name="nota2" size="5">
+                </td>
+                <td>
+                    <label for="porcen2">Porcentaje: </label>
+                    <input type="text" name="porcen2" size="5">
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Calcular" onclick="calcular()">
+        <p id="resultado"></p>
+    </form>
+</body>
+</html>

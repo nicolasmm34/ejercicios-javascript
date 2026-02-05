@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 - Formularios</title>
+    <script>
+        function inic(){
+            var di = document.game.dinero.value = 100;
+        }
+        function calc(){
+            var din = parseInt(document.game.dinero.value);
+            var num = document.game.num.value;     
+            var apu = parseInt(document.game.apuesta.value);
+            var dado = Math.floor(Math.random()*7);
+            var ganancia = 0;
+            if(din > 0){
+                if(num == dado){
+                    document.game.dado.value = dado;
+                    document.game.res.valu = ("Has ganado! " + apu*2);
+                    ganancia = (din+apu*2);
+                    document.game.dinero.value = ganancia;
+                } else {
+                    document.game.dado.value = dado;
+                    document.game.res.value = ("Has perdido! " + apu);
+                    ganancia = (din-apu);
+                    document.game.dinero.value = ganancia;
+                }
+            } else {
+                window.alert("Has perdido todo tu dinero!");
+            }  
+        }
+
+    </script>
+</head>
+<body>
+    <h1 align="center">JUEGO APUESTAS</h1>
+    <div align="center">
+        <form name="game">
+            Dinero: <input type="text" name="dinero" size="5"> &nbsp; &nbsp;
+            Numero del dado: <input type="label" name="dado" size="5" disabled>
+            <br><br>
+            Introduzca un numero del 1 al 6: <input type="text" name="num" size="5">
+            <br><br>
+            Introduzca su apuesta: <input type="text" name="apuesta" size="5">
+            <br><br>
+            <input type="button" name="play" value="Jugar" onclick="calc()">
+            <input type="button" name="start" value="Start" onclick="inic()">
+            <br><br>
+            <input type="label" name="res" size="15">
+        </form>
+    </div>
+</body>
+</html>
