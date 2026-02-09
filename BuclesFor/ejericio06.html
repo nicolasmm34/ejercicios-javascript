@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 - Bucles</title>
+</head>
+<script>
+    let funcionUno = () => {
+        let result = "";
+        let i;
+        for(i = 1; i <= 6; i++){
+            result = result + `<h${i}> Titulo ${i} </h>`;
+        }
+        document.getElementById("central").innerHTML = result;
+    }
+</script>
+<body>
+    <p>Pulsa el boton y se crea HTML tags de la 1 a la 6</p>
+    <input type="button" value="Pulsa aquí" onclick="funcionUno()">
+    <div id="central"></div>
+</body>
+</html>
