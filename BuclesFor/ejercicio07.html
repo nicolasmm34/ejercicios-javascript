@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 - Bucles</title>
+    <script>
+        let producto = () => {
+            let f1, f2, resultado;
+            f1 = document.formulario.numero1.value;
+            f2 = document.formulario.numero2.value;
+            resultado = "<br><table>";
+
+            for(let i = 1; i <= f2; i++){
+                resultado += "<tr><td>" + `${f1} x ${i}</td>`;
+                resultado += "<td> = </td>";
+                resultado += `<td> ${f1*i} </td></tr>`;
+            }
+             resultado += "</table>"
+
+            document.getElementById("resultado").innerHTML = resultado
+        }
+    </script>
+</head>
+<body>
+    <form name="formulario">
+        <label for="numero1">Primer factor: </label>
+        <input type="text" name="numero1" id="numero1" size="5">
+        <br>
+        <label for="numero2">Segundo factor: </label>
+        <input type="text" name="numero2" id="numero2" size="5">
+        <br>
+        <input type="button" value="Producto" onclick="producto()">
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>
